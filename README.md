@@ -115,7 +115,7 @@ fooding/
         ├── contexts/    # Contextes React
         └── utils/       # Utilitaires
 
-
+```
 ---
 
 *FOODING : Transformer la décision culinaire en expérience personnalisée et enrichissante.*
