@@ -1,8 +1,9 @@
+// models/Restaurant.js - CORRECT
 const mongoose = require('mongoose');
 
 const restaurantSchema = new mongoose.Schema({
   position: Number,
-  title: String,
+  title: { type: String, required: true },
   address: String,
   latitude: Number,
   longitude: Number,
@@ -16,15 +17,13 @@ const restaurantSchema = new mongoose.Schema({
   category: [String],
   ambiance: [String],
   phoneNumber: String,
+  website: String,
   cid: String
 }, {
-  strict: false,
-  collection: 'Rabat' // Par défaut, on peut le changer dynamiquement
+  timestamps: true
 });
 
-// Fonction pour obtenir un modèle pour une ville spécifique
-const getRestaurantModel = (ville) => {
-  return mongoose.model('Restaurant', restaurantSchema, ville);
-};
+// Index pour améliorer les performances
+restaurantSchema.index({ address: 'text', title: 'text' });
 
-module.exports = { getRestaurantModel, restaurantSchema };
+module.exports = mongoose.model('Restaurant', restaurantSchema, 'restaurants');
