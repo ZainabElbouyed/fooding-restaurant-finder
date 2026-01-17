@@ -1,13 +1,19 @@
 # FOODING - Plateforme Intelligente de Découverte Culinaire
 
+---
+
 ## 🍽️ Description du Projet
 FOODING est une plateforme web intelligente de recommandation culinaire conçue pour la Coupe du Monde 2030 au Maroc. L'application combine intelligence artificielle, analyse comportementale et données contextuelles pour transformer l'expérience de choix alimentaire en recommandations personnalisées instantanées.
+
+---
 
 ## 🎯 Objectifs Principaux
 - **Réduire le temps de décision** : Diminuer de 80% le temps consacré au choix d'un restaurant
 - **Personnalisation avancée** : Atteindre 90% de satisfaction utilisateur avec des recommandations contextuelles
 - **Adapter au contexte marocain** : Filtres spécifiques (halal, familial, etc.) et interface multilingue
 - **Soutenir les commerces locaux** : Augmenter la visibilité des restaurants traditionnels
+  
+---
 
 ## 👥 Public Cible
 | Catégorie | Besoins Spécifiques |
@@ -17,6 +23,8 @@ FOODING est une plateforme web intelligente de recommandation culinaire conçue 
 | Familles | Espace adapté, menus enfants |
 | Touristes | Authenticité, traduction, découverte |
 | Restaurateurs | Visibilité, analytics, feedback |
+
+---
 
 ## 🛠️ Stack Technique
 ### Backend
@@ -32,6 +40,8 @@ FOODING est une plateforme web intelligente de recommandation culinaire conçue 
 - **Routing** : React Router DOM v6+
 - **HTTP Client** : Axios v1+
 - **Styling** : Tailwind CSS v3.3+ avec PostCSS et Autoprefixer
+  
+---
 
 ## 🔍 Système de Filtrage Intelligent
 ### Filtres Disponibles
@@ -52,6 +62,8 @@ FOODING est une plateforme web intelligente de recommandation culinaire conçue 
 2. **Logique ET entre les différents critères** :
    - Le restaurant doit satisfaire tous les critères remplis par l'utilisateur
    - Exemple : Budget $$ ET Halal Oui → restaurant doit correspondre aux deux
+     
+---
 
 ## 📱 Fonctionnalités Clés
 ### 1. Authentification Simple
@@ -77,6 +89,8 @@ FOODING est une plateforme web intelligente de recommandation culinaire conçue 
 - Aide contextuelle et FAQ
 - Suggestions basées sur la météo
 - Contact rapide avec les restaurants
+  
+---
 
 ## 🚀 Évolutions Futures
 ### Intelligence Artificielle
@@ -95,6 +109,8 @@ FOODING est une plateforme web intelligente de recommandation culinaire conçue 
 - Données d'affluence en temps réel
 - Intégration Street View
 - Système de gestion de menus dynamique (CMS pour restaurateurs)
+  
+---
 
 ## 🏗️ Architecture du Projet
 ```
@@ -116,6 +132,25 @@ fooding/
         └── utils/       # Utilitaires
 
 ```
+
+---
+
+## 📦 Installation
+
+### Backend
+```bash
+cd server
+npm install
+npm start
+```
+
+### Frontend
+```bash
+cd client
+npm install
+npm start
+```
+
 ---
 
 *FOODING : Transformer la décision culinaire en expérience personnalisée et enrichissante.*
