@@ -20,13 +20,13 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Services restaurants CORRIGÉS
+// Services restaurants 
 export const restaurantService = {
   // Ville et base
   getVilles: () => api.get('/restaurants/villes'),
   getAll: () => api.get('/restaurants'),
   
-  // Récupérer par ville (sans filtres) - VERSION CORRIGÉE
+  // Récupérer par ville 
   getByVille: async (ville) => {
     try {
       console.log(`🍽️ API getByVille appelée pour: ${ville}`);
@@ -50,14 +50,14 @@ export const restaurantService = {
         data: {
           success: true,
           count: 0,
-          data: [], // ← TOUJOURS un tableau vide
+          data: [], 
           message: 'Aucun restaurant trouvé'
         }
       };
     }
   },
   
-  // Recherche avec filtres - VERSION CORRIGÉE
+  // Recherche avec filtres 
   search: async (ville, filters) => {
     try {
       console.log(`🔍 API search appelée pour: ${ville}`, filters);
@@ -111,7 +111,7 @@ export const restaurantService = {
         data: {
           success: true,
           count: 0,
-          data: [], // ← TOUJOURS un tableau vide
+          data: [],
           message: 'Recherche échouée'
         }
       };
@@ -121,7 +121,7 @@ export const restaurantService = {
   // Récupérer un restaurant spécifique
   getById: (ville, id) => api.get(`/restaurants/${ville}/${id}`),
   
-  // Route POST pour filtrer (ancienne méthode)
+  // Route POST pour filtrer 
   filter: (filters) => api.post('/restaurants/filter', filters),
   
   // Recommandations
