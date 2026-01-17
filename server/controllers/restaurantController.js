@@ -1,7 +1,7 @@
 const Restaurant = require('../models/Restaurant');
 const mongoose = require('mongoose');
 
-// NOUVELLE FONCTION - Logique OU pour chaque critère, ET entre critères
+// Logique OU pour chaque critère, ET entre critères
 exports.filterRestaurants = async (req, res) => {
   try {
     const filters = req.body;
@@ -211,7 +211,7 @@ exports.searchRestaurants = async (req, res) => {
       success: true,
       count: 0,
       message: 'Aucun résultat trouvé',
-      data: [] // ← TOUJOURS un tableau
+      data: [] 
     });
   }
 };
@@ -296,7 +296,7 @@ exports.getRecommendations = async (req, res) => {
       success: true,
       count: resultData.length,
       message: `Recommandations - ${resultData.length} résultat(s)`,
-      data: resultData // ← TOUJOURS un tableau
+      data: resultData 
     });
     
   } catch (error) {
@@ -309,7 +309,7 @@ exports.getRecommendations = async (req, res) => {
   }
 };
 
-// Récupérer la liste des villes disponibles - VERSION FIXE
+// Récupérer la liste des villes disponibles 
 exports.getVilles = async (req, res) => {
   try {
     console.log('🔍 getVilles appelé');
@@ -367,7 +367,7 @@ exports.getAllRestaurants = async (req, res) => {
       success: true,
       count: resultData.length,
       message: `Tous les restaurants - ${resultData.length} résultat(s)`,
-      data: resultData // ← TOUJOURS un tableau
+      data: resultData 
     });
     
   } catch (error) {
@@ -422,5 +422,4 @@ exports.getRestaurantById = async (req, res) => {
     });
   }
 };
-// À la TRÈS TRÈS FIN de restaurantController.js, APRÈS toutes les fonctions
 
