@@ -48,7 +48,6 @@ const CityGuide = () => {
     try {
       const response = await restaurantService.getByVille(villeSelectionnee);
       
-      // ✅ CORRECTION: Garantir que c'est un tableau
       const restaurantsData = Array.isArray(response.data.data) 
         ? response.data.data 
         : [];
@@ -57,7 +56,7 @@ const CityGuide = () => {
       
     } catch (error) {
       console.error('Erreur lors du chargement des restaurants:', error);
-      setRestaurants([]); // ← Toujours un tableau vide en cas d'erreur
+      setRestaurants([]); 
     } finally {
       setLoading(false);
     }
@@ -67,7 +66,7 @@ const CityGuide = () => {
     try {
       const response = await restaurantService.getRecommendations(villeSelectionnee);
       
-      // ✅ CORRECTION: Garantir que c'est un tableau
+      
       const recommendationsData = Array.isArray(response.data.data) 
         ? response.data.data 
         : [];
@@ -76,7 +75,7 @@ const CityGuide = () => {
       
     } catch (error) {
       console.error('Erreur lors du chargement des recommandations:', error);
-      setRecommendations([]); // ← Toujours un tableau vide
+      setRecommendations([]); 
     }
   };
 
@@ -89,7 +88,7 @@ const CityGuide = () => {
       
       const response = await restaurantService.search(villeSelectionnee, filters);
       
-      // ✅ CORRECTION: Garantir que c'est un tableau
+      
       const filteredData = Array.isArray(response.data.data) 
         ? response.data.data 
         : [];
@@ -120,7 +119,7 @@ const CityGuide = () => {
     loadRestaurants();
   };
 
-  // ✅ Calcul sécurisé du nombre de restaurants
+  
   const restaurantsCount = Array.isArray(restaurants) ? restaurants.length : 0;
 
   return (
@@ -195,7 +194,7 @@ const CityGuide = () => {
             {/* Liste des restaurants */}
             <div>
               <div className="flex items-center justify-between mb-6">
-                {/* ✅ CORRECTION: Utiliser restaurantsCount au lieu de restaurants.length */}
+                {/* restaurantsCount au lieu de restaurants.length */}
                 <h2 className="text-2xl font-bold text-gray-800">
                   Tous les restaurants ({Array.isArray(restaurants) ? restaurants.length : 0})
                 </h2>
