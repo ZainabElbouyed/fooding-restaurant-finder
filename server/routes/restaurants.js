@@ -1,15 +1,15 @@
-// routes/restaurants.js - VERSION CORRIGÉE
+
 const express = require('express');
-// Crée un routeur Express, PAS require('router')
+// Crée un routeur Express
 const router = express.Router();
 
-// Importez votre contrôleur
+// Importez contrôleur
 const restaurantController = require('../controllers/restaurantController');
 
 // Routes avec les bons handlers
 router.get('/villes', restaurantController.getVilles);
 
-// Routes DYNAMIQUES en DERNIER
+// Routes DYNAMIQUES 
 router.get('/:ville/search', restaurantController.searchRestaurants);
 router.get('/:ville/recommendations', restaurantController.getRecommendations);
 router.get('/:ville/:id', restaurantController.getRestaurantById);
