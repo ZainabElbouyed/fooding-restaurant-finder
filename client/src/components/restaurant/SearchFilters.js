@@ -39,7 +39,7 @@ const SearchFilters = ({ filters, setFilters, onSearch, onReset }) => {
     'Restaurant asiatique','Restaurant de fruits de mer','Restaurant de grillades','Restaurant de poisson',
     'Restaurant de poulet','Restaurant espagnol','Restaurant familial','Restaurant fast food','Restaurant français',
     'Restaurant hollandais','Restaurant international','Restaurant italien','Restaurant libanais','Restaurant marocain',
-    'Restaurant méditerranéen','Restaurant occidental','Restaurant surinamais-javanais','Restaurant syrien','Restaurant turc','Sandwicherie','Traiteur','Vins','Restaurant japaunais'
+    'Restaurant méditerranéen','Restaurant occidental','Restaurant surinamais-javanais','Restaurant syrien','Restaurant turc','Sandwicherie','Traiteur','Vins','Restaurant japonais'
   ];
 
   // Ambiances
