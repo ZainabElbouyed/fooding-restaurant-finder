@@ -46,7 +46,7 @@ FOODING est une plateforme web intelligente de recommandation culinaire conçue 
 ## 🔍 Système de Filtrage Intelligent
 ### Filtres Disponibles
 - **Ville** : Recherche dans l'adresse
-- **Budget** : Niveau de prix ($, $$, $$$, $$$$)
+- **Budget** : Niveau de prix ( $, $$, $$$, $$$$)
 - **Adapté enfants** : Oui/Non
 - **Halal** : Oui/Non
 - **Végétarien** : Oui/Non
